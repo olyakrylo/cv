@@ -3,6 +3,7 @@ import "./App.css";
 import About from "./components/About";
 import Organization from "./components/Organization";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         />
         <div className="content__title">Projects</div>
         <Projects />
+        <div className="content__title">Interests &amp; Skills</div>
+        <Skills />
         <div className="content__title">Experience</div>
         <Organization
           title="BIOCAD"
