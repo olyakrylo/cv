@@ -2,33 +2,6 @@ import React from "react";
 import "./About.css";
 
 export default function About() {
-  function getContacts() {
-    const items = [
-      {
-        icon: "vk",
-        href: "https://vk.com/olyakrylo",
-      },
-      {
-        icon: "tg",
-        href: "https://t.me/olyakrylo",
-      },
-      {
-        icon: "github",
-        href: "https://github.com/olyakrylo",
-      },
-      {
-        icon: "inst",
-        href: "https://www.instagram.com/olyakrylo",
-      },
-    ];
-
-    return items.map(item => (
-      <a href={item.href} className="info__link">
-        <img src={`${process.env.PUBLIC_URL}/icons/${item.icon}.svg`} alt="" />
-      </a>
-    ));
-  }
-
   const infoDetails = {
     Age: "21",
     Location: "Saint-Petersburg",
@@ -36,6 +9,43 @@ export default function About() {
     Phone: "+79222162625",
     Website: "olyakrylo.github.io/cv",
   };
+
+  const icons = [
+    {
+      icon: "vk",
+      href: "https://vk.com/olyakrylo",
+    },
+    {
+      icon: "tg",
+      href: "https://t.me/olyakrylo",
+    },
+    {
+      icon: "github",
+      href: "https://github.com/olyakrylo",
+    },
+    {
+      icon: "inst",
+      href: "https://www.instagram.com/olyakrylo",
+    },
+  ];
+
+  function getDetails() {
+    return Object.entries(infoDetails).reduce((prev, curr) => {
+      return [
+        ...prev,
+        <div className="info__details_bold">{curr[0]}</div>,
+        <div>{curr[1]}</div>,
+      ];
+    }, []);
+  }
+
+  function getContacts() {
+    return icons.map(item => (
+      <a href={item.href} className="info__link">
+        <img src={`${process.env.PUBLIC_URL}/icons/${item.icon}.svg`} alt="" />
+      </a>
+    ));
+  }
 
   return (
     <div className="about">
@@ -50,15 +60,7 @@ export default function About() {
           I'm <span className="info__name_bold">Krylova Olga</span>
         </div>
         <div className="info__position">Front-End Developer</div>
-        <div className="info__details">
-          {Object.entries(infoDetails).reduce((prev, curr) => {
-            return [
-              ...prev,
-              <div className="info__details_bold">{curr[0]}</div>,
-              <div>{curr[1]}</div>,
-            ];
-          }, [])}
-        </div>
+        <div className="info__details">{getDetails()}</div>
         <div className="info__divider"></div>
         <div className="info__links">{getContacts()}</div>
       </div>

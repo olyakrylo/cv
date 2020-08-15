@@ -1,0 +1,56 @@
+.org {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 35px;
+    box-sizing: border-box;
+    box-shadow: var(--shadow);
+}
+
+.org__info {
+    color: var(--dark-gray);
+}
+
+.org__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.org__subtitle {
+    margin-top: 7px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.org__year {
+    margin-top: 28px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+    color: var(--seagreen);
+}
+
+.org__img {
+    display: block;
+    height: 90px;
+    margin-left: 30px;
+}
+
+@media (max-width: 500px) {
+    .org {
+        flex-direction: column;
+    }
+
+    .org__info {
+        text-align: center;
+    }
+
+    .org__img {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}

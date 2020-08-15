@@ -1,6 +1,7 @@
 :root {
   --seagreen: #1a8f88;
   --dark-gray: #646464;
+  --shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -12,4 +13,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #e5e5e5;
   position: relative;
+  padding-bottom: 70px;
 }

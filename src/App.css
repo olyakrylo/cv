@@ -16,7 +16,6 @@ body::before {
   margin: auto;
   width: 800px;
   max-width: 90vw;
-  height: 100px;
   font-family: "Roboto";
   font-weight: 500;
   padding-top: 50px;
@@ -41,4 +40,15 @@ body::before {
   font-weight: 300;
   font-size: 17px;
   line-height: 20px;
+}
+
+.content__title {
+  margin: 70px auto 25px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--seagreen);
 }
