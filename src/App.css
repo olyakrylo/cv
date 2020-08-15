@@ -1,0 +1,44 @@
+.container {
+  width: 100%;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-color: var(--seagreen);
+  height: 320px;
+  width: 100%;
+}
+
+.content {
+  position: relative;
+  margin: auto;
+  width: 800px;
+  max-width: 90vw;
+  height: 100px;
+  font-family: "Roboto";
+  font-weight: 500;
+  padding-top: 50px;
+}
+
+.header {
+  color: #fff;
+  letter-spacing: 0.08em;
+}
+
+.header__name {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+.header__position {
+  display: block;
+  margin-top: 12px;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 20px;
+}
