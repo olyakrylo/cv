@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import About from "./components/About";
 import Organization from "./components/Organization";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           year="2017-..."
           logo="spbu.png"
         />
+        <div className="content__title">Projects</div>
+        <Projects />
         <div className="content__title">Experience</div>
         <Organization
           title="BIOCAD"

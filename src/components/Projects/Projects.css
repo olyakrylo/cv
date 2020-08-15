@@ -1,0 +1,43 @@
+.projects {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "odd div even";
+    grid-template-columns: 1fr 5px 1fr;
+    grid-gap: 25px;
+}
+
+.projects__even, .projects__odd {
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    height: max-content;
+}
+
+.projects__odd {
+    grid-area: odd;
+}
+
+.projects__even {
+    margin-top: 85px;
+    grid-area: even;
+}
+
+.projects__divider {
+    grid-area: div;
+    min-width: 5px;
+    min-width: 5px;
+    height: auto;
+    background-color: #fff;
+    box-shadow: var(--shadow);
+}
+
+@media(max-width: 700px) {
+    .projects {
+        grid-template-areas: "div odd" "div even";
+        grid-template-columns: 5px 1fr;
+    }
+
+    .projects__even {
+        margin-top: 0;
+    }
+}

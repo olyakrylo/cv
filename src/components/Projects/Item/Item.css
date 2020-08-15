@@ -1,0 +1,125 @@
+.item {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: var(--shadow);
+    position: relative;
+    width: 100%;
+    padding: 17px;
+    box-sizing: border-box;
+}
+
+.item__title {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: var(--seagreen);
+}
+
+.item__subtitle, .item__link, .item_techs {
+    margin-top: 7px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.item__subtitle {
+    color: var(--dark-gray);
+}
+
+.item__link {
+    display: block;
+    text-decoration: none;
+    color: var(--seagreen);
+}
+
+.item__bottom { 
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item__more {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #C4C4C4;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.item__techs {
+    max-width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.item__tech {
+    width: max-content;
+    background-color: var(--seagreen);
+    margin: 3px;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 6px 8px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.item__descr {
+    display: none;
+}
+
+.item_odd::before, .item_even::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    margin-top: -15px;
+}
+
+.item_odd::before {
+    right: -25px;
+    border: 15px solid transparent;
+    border-left: 15px solid #fff;
+}
+
+.item_even::before {
+    left: -25px;
+    border: 15px solid transparent;
+    border-right: 15px solid #fff;
+}
+
+.item_odd::after, .item_even::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    margin-top: -7.5px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--seagreen);
+    border-radius: 50%;
+}
+
+.item_odd::after {
+    right: -35px;
+}
+
+.item_even::after {
+    left: -35px;
+}
+
+@media(max-width: 700px) {
+    .item_odd::after {
+        left: -35px;
+    }
+
+    .item_odd::before {
+        right: unset;
+        left: -25px;
+        border: 15px solid transparent;
+        border-right: 15px solid #fff;
+    }
+}
