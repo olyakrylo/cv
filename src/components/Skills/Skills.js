@@ -6,8 +6,8 @@ import skillsList from "./skillsList";
 export default function Skills() {
   return (
     <div className="skills">
-      {skillsList.map(item => (
-        <div className="skills__item-container">
+      {skillsList.map((item, i) => (
+        <div className="skills__item-container" key={i}>
           <div className="skills__item">
             <img
               className="skills__img"

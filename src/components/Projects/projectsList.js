@@ -5,7 +5,7 @@ export default [
     linkTitle: "Open with Heroku",
     link: "",
     techs: ["ReactJS", "Django", "Heroku"],
-    description: "Description",
+    description: "Later...",
   },
   {
     title: "Memory Cards",
@@ -13,7 +13,7 @@ export default [
     linkTitle: "Open with Pages",
     link: "",
     techs: ["ReactJS", "Express", "MongoDB"],
-    description: "Description",
+    description: "Later...",
   },
   {
     title: "Mobile web-app for employment control system",
@@ -21,7 +21,7 @@ export default [
     linkTitle: "Open with Expo",
     link: "",
     techs: ["React-Native", "Expo SDK"],
-    description: "Description",
+    description: "Later...",
   },
   {
     title: "Site layout by open source layout",
@@ -29,6 +29,6 @@ export default [
     linkTitle: "Open with Pages",
     link: "",
     techs: ["ReactJS", "SASS"],
-    description: "Description",
+    description: "Later...",
   },
 ];

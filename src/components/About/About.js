@@ -40,8 +40,8 @@ export default function About() {
   }
 
   function getContacts() {
-    return icons.map(item => (
-      <a href={item.href} className="info__link">
+    return icons.map((item, i) => (
+      <a href={item.href} className="info__link" key={i}>
         <img src={`${process.env.PUBLIC_URL}/icons/${item.icon}.svg`} alt="" />
       </a>
     ));

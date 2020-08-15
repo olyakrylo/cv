@@ -10,7 +10,7 @@ export default function Projects() {
       <div className="projects__odd">
         {projectsList
           .filter((_, i) => i % 2 === 0)
-          .map(item => (
+          .map((item, i) => (
             <Item
               title={item.title}
               subtitle={item.subtitle}
@@ -19,6 +19,7 @@ export default function Projects() {
               techs={item.techs}
               description={item.description}
               type="odd"
+              key={i}
             />
           ))}
       </div>
@@ -26,7 +27,7 @@ export default function Projects() {
       <div className="projects__even">
         {projectsList
           .filter((_, i) => i % 2 !== 0)
-          .map(item => (
+          .map((item, i) => (
             <Item
               title={item.title}
               subtitle={item.subtitle}
@@ -35,6 +36,7 @@ export default function Projects() {
               techs={item.techs}
               description={item.description}
               type="even"
+              key={i}
             />
           ))}
       </div>
