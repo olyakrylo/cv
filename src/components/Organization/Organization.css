@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 35px;
+    padding: 18px 20px 18px 35px;
     box-sizing: border-box;
     box-shadow: var(--shadow);
 }
@@ -36,7 +36,7 @@
 
 .org__img {
     display: block;
-    height: 90px;
+    height: 70px;
     margin-left: 30px;
 }
 
@@ -51,6 +51,6 @@
 
     .org__img {
         margin-left: 0;
-        margin-top: 30px;
+        margin-top: 15px;
     }
 }

@@ -28,7 +28,7 @@ function App() {
         <div className="content__title">Experience</div>
         <Organization
           title="BIOCAD"
-          subtitle="Junior Front-End developer"
+          subtitle="Junior Front-End Developer"
           year="2020"
           logo="biocad.png"
         />
