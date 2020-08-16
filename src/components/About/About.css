@@ -9,6 +9,7 @@
   display: flex;
   box-shadow: var(--shadow);
   position: relative;
+  min-height: 400px;
 }
 
 .about__img {
@@ -116,6 +117,7 @@
   .about {
     flex-direction: column;
     padding-bottom: 56px;
+    min-height: auto;
   }
 
   .info__links {

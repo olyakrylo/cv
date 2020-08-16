@@ -9,13 +9,10 @@ export default class Item extends React.Component {
     this.descr = React.createRef();
   }
 
-  componentDidMount() {
-    const height = getComputedStyle(this.item.current).height;
-    this.item.current.style.height = height;
-  }
-
   more = () => {
     this.item.current.classList.add("item_hidden");
+    const height = getComputedStyle(this.item.current).height;
+    this.item.current.style.height = height;
     setTimeout(() => {
       this.item.current.classList.remove("item_hidden");
       this.info.current.classList.add("item__info_hidden");
@@ -29,6 +26,7 @@ export default class Item extends React.Component {
       this.item.current.classList.remove("item_hidden");
       this.info.current.classList.remove("item__info_hidden");
       this.descr.current.classList.add("item__descr_hidden");
+      this.item.current.style.height = "auto";
     }, 300);
   };
 
