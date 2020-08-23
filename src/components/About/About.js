@@ -30,11 +30,13 @@ export default function About() {
   ];
 
   function getDetails() {
-    return Object.entries(infoDetails).reduce((prev, curr) => {
+    return Object.entries(infoDetails).reduce((prev, [field, value]) => {
       return [
         ...prev,
-        <div className="info__details_bold">{curr[0]}</div>,
-        <div>{curr[1]}</div>,
+        <div className="info__details_bold" key={field}>
+          {field}
+        </div>,
+        <div key={value}>{value}</div>,
       ];
     }, []);
   }
