@@ -17,7 +17,7 @@
 
 .skills__animation-container {
     position: absolute;
-    top: 500px;
+    top: 1000px;
     transition: top .5s ease-in-out;
 }
 
