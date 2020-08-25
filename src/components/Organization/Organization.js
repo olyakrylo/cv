@@ -1,12 +1,17 @@
 import React from "react";
 import "./Organization.css";
+import { FormattedMessage } from "react-intl";
 
 export default function Organization({ title, subtitle, year, logo }) {
   return (
     <div className="org">
       <div className="org__info">
-        <div className="org__title">{title}</div>
-        <div className="org__subtitle">{subtitle}</div>
+        <div className="org__title">
+          <FormattedMessage id={title} />
+        </div>
+        <div className="org__subtitle">
+          <FormattedMessage id={subtitle} />
+        </div>
         <div className="org__year">{year}</div>
       </div>
       <img

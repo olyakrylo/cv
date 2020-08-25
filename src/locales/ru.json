@@ -1,0 +1,21 @@
+{
+    "language": "Русский",
+    "name": "Крылова Ольга",
+    "position": "Фронтенд разработчик",
+    "about.hello": "Привет",
+    "about.name": "Я",
+    "about.age": "Возраст",
+    "about.location": "Город",
+    "about.email": "Email",
+    "about.phone": "Телефон",
+    "about.website": "Сайт",
+    "about.city": "Санкт-Петербург",
+    "education": "Образование",
+    "education.uni": "4 курс бакалавриата в Санкт-Петербургском Государственном Университете",
+    "education.faculty": "Факультет Прикладной математики - процессов управления",
+    "projects": "Проекты",
+    "interests": "Интересы",
+    "skills": "Навыки",
+    "experience": "Опыт",
+    "experience.position": "Младший фронтенд разработчик"
+}
