@@ -1,21 +1,53 @@
 {
-    "language": "English",
-    "name": "Krylova Olga",
-    "position": "Front-End developer",
-    "about.hello": "Hello & Welcome",
-    "about.name": "I'm",
-    "about.age": "Age",
-    "about.location": "Location",
-    "about.email": "Email",
-    "about.phone": "Phone",
-    "about.website": "Website",
-    "about.city": "Saint-Petersburg",
-    "education": "Education",
-    "education.uni": "4th year bachelor at Saint-Petersburg State University",
-    "education.faculty": "Faculty of Applied Maths and Control Processes",
-    "projects": "Projects",
-    "interests": "Interests",
-    "skills": "Skills",
-    "experience": "Experience",
-    "experience.position": "Junior Front-End developer"
+  "language": "English",
+  "name": "Krylova Olga",
+  "position": "Front-End developer",
+  "about": {
+    "hello": "Hello & Welcome",
+    "name": "I'm",
+    "age": "Age",
+    "location": "Location",
+    "email": "Email",
+    "phone": "Phone",
+    "website": "Website",
+    "city": "Saint Petersburg"
+  },
+  "education": "Education",
+  "uni": {
+    "status": "4th year bachelor at Saint-Petersburg State University",
+    "faculty": "Faculty of Applied Maths and Control Processes"
+  },
+  "education.uni": "4th year bachelor at Saint-Petersburg State University",
+  "education.faculty": "Faculty of Applied Maths and Control Processes",
+  "projects": "Projects",
+  "read_more": "Read more",
+  "back": "Back",
+  "open_with": "Open with",
+  "mc": {
+    "title": "Memory Cards",
+    "subtitle": "Simple project",
+    "description": "Later..."
+  },
+  "pb": {
+    "title": "Web-app for faculty trade union bureau",
+    "subtitle": "Uni project",
+    "description": "Later..."
+  },
+  "ecs": {
+    "title": "Mobile web-app for employment control system",
+    "subtitle": "Uni project",
+    "description": "Later..."
+  },
+  "tsl": {
+    "title": "Site layout by open source layout",
+    "subtitle": "With adaptive design",
+    "description": "Later..."
+  },
+  "interests": "Interests",
+  "skills": "Skills",
+  "experience": "Experience",
+  "BIOCAD": {
+    "name": "BIOCAD",
+    "position": "Front-End Intern"
+  }
 }

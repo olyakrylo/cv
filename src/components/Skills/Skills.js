@@ -1,12 +1,12 @@
 import React from "react";
 import "./Skills.css";
-import skillsList from "./skillsList";
+import { skills } from "../../info";
 import SkillsItem from "./Item";
 
 export default class Skills extends React.Component {
   constructor(props) {
     super(props);
-    this.items = skillsList.map(() => React.createRef());
+    this.items = skills.map(() => React.createRef());
     this.skills = React.createRef();
   }
 
@@ -37,7 +37,7 @@ export default class Skills extends React.Component {
   render() {
     return (
       <div className="skills" ref={this.skills}>
-        {skillsList.map((item, i) => (
+        {skills.map((item, i) => (
           <div className="skills__item-container" key={i}>
             <div ref={this.items[i]} className="skills__animation-container">
               <SkillsItem info={item} />

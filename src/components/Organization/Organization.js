@@ -1,17 +1,14 @@
 import React from "react";
 import "./Organization.css";
-import { FormattedMessage } from "react-intl";
+import { useTranslation } from "react-i18next";
 
 export default function Organization({ title, subtitle, year, logo }) {
+  const { t } = useTranslation();
   return (
     <div className="org">
       <div className="org__info">
-        <div className="org__title">
-          <FormattedMessage id={title} />
-        </div>
-        <div className="org__subtitle">
-          <FormattedMessage id={subtitle} />
-        </div>
+        <div className="org__title">{t(title)}</div>
+        <div className="org__subtitle">{t(subtitle)}</div>
         <div className="org__year">{year}</div>
       </div>
       <img

@@ -1,56 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./Item.css";
 
-export default class Item extends React.Component {
-  constructor(props) {
-    super(props);
-    this.item = React.createRef();
-    this.info = React.createRef();
-    this.descr = React.createRef();
+export default function Item({ intlName: intl, link, linkTitle, techs, type }) {
+  const item = React.createRef();
+
+  const [showDescr, toggleDescr] = useState(false);
+
+  function more() {
+    item.current.classList.add("item_hidden");
+    const height = getComputedStyle(item.current).height;
+    item.current.style.height = height;
+    setTimeout(() => {
+      item.current.classList.remove("item_hidden");
+      toggleDescr(true);
+    }, 300);
   }
 
-  more = () => {
-    this.item.current.classList.add("item_hidden");
-    const height = getComputedStyle(this.item.current).height;
-    this.item.current.style.height = height;
+  function back() {
+    item.current.classList.add("item_hidden");
     setTimeout(() => {
-      this.item.current.classList.remove("item_hidden");
-      this.info.current.classList.add("item__info_hidden");
-      this.descr.current.classList.remove("item__descr_hidden");
+      item.current.classList.remove("item_hidden");
+      item.current.style.height = "auto";
+      toggleDescr(false);
     }, 300);
-  };
+  }
 
-  back = () => {
-    this.item.current.classList.add("item_hidden");
-    setTimeout(() => {
-      this.item.current.classList.remove("item_hidden");
-      this.info.current.classList.remove("item__info_hidden");
-      this.descr.current.classList.add("item__descr_hidden");
-      this.item.current.style.height = "auto";
-    }, 300);
-  };
-
-  render() {
-    const {
-      title,
-      subtitle,
-      link,
-      linkTitle,
-      techs,
-      type,
-      description,
-    } = this.props;
-    return (
-      <div className={`item item_${type}`} ref={this.item}>
-        <div className="item__info" ref={this.info}>
-          <div className="item__title">{title}</div>
-          <div className="item__subtitle">{subtitle}</div>
+  const { t } = useTranslation();
+  return (
+    <div className={`item item_${type}`} ref={item}>
+      {!showDescr && (
+        <div className="item__info">
+          <div className="item__title">{t(`${intl}.title`)}</div>
+          <div className="item__subtitle">{t(`${intl}.subtitle`)}</div>
           <a className="item__link" href={link}>
-            {linkTitle}
+            {t("open_with")}
+            &nbsp;{linkTitle}
           </a>
           <div className="item__bottom">
-            <button className="item__more" onClick={this.more}>
-              Read more
+            <button className="item__more" onClick={more}>
+              {t("read_more")}
             </button>
             <div className="item__techs">
               {techs.map((tech, i) => (
@@ -61,13 +50,15 @@ export default class Item extends React.Component {
             </div>
           </div>
         </div>
-        <div className="item__descr item__descr_hidden" ref={this.descr}>
-          <div>{description}</div>
-          <button className="item__descr-back" onClick={this.back}>
-            Back
+      )}
+      {showDescr && (
+        <div className="item__descr">
+          {t(`${intl}.description`)}
+          <button className="item__descr-back" onClick={back}>
+            {t("back")}
           </button>
         </div>
-      </div>
-    );
-  }
+      )}
+    </div>
+  );
 }

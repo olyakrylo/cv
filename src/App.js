@@ -1,56 +1,42 @@
 import React from "react";
 import "./App.css";
-import { FormattedMessage } from "react-intl";
+import { useTranslation } from "react-i18next";
 import LocalesMenu from "./components/LocalesMenu";
 import About from "./components/About";
 import Organization from "./components/Organization";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
-function App({ changeLanguage, currLanguage }) {
+function App() {
+  const { t } = useTranslation();
   return (
     <div className="container">
       <div className="content">
         <div className="header">
           <div>
-            <span className="header__name">
-              <FormattedMessage id="name" />
-            </span>
-            <span className="header__position">
-              <FormattedMessage id="position" />
-            </span>
+            <span className="header__name">{t("name")}</span>
+            <span className="header__position">{t("position")}</span>
           </div>
-          <LocalesMenu
-            language={currLanguage}
-            changeLanguage={changeLanguage}
-          />
+          <LocalesMenu />
         </div>
         <About />
-        <div className="content__title">
-          <FormattedMessage id="education" />
-        </div>
+        <div className="content__title">{t("education")}</div>
         <Organization
-          title="education.uni"
-          subtitle="education.faculty"
+          title="uni.status"
+          subtitle="uni.faculty"
           year="2017-..."
           logo="spbu.png"
         />
-        <div className="content__title">
-          <FormattedMessage id="projects" />
-        </div>
+        <div className="content__title">{t("projects")}</div>
         <Projects />
         <div className="content__title">
-          <FormattedMessage id="interests" />
-          &nbsp;&amp;&nbsp;
-          <FormattedMessage id="skills" />
+          {t("interests")}&nbsp;&amp;&nbsp;{t("skills")}
         </div>
         <Skills />
-        <div className="content__title">
-          <FormattedMessage id="experience" />
-        </div>
+        <div className="content__title">{t("experience")}</div>
         <Organization
-          title="BIOCAD"
-          subtitle="experience.position"
+          title="BIOCAD.name"
+          subtitle="BIOCAD.position"
           year="2020"
           logo="biocad.png"
         />

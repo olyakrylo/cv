@@ -1,23 +1,20 @@
 import React from "react";
 import "./Projects.css";
-import "./projectsList";
 import Item from "./Item";
-import projectsList from "./projectsList";
+import { projects } from "../../info";
 
 export default function Projects() {
   return (
     <div className="projects">
       <div className="projects__odd">
-        {projectsList
+        {projects
           .filter((_, i) => i % 2 === 0)
           .map((item, i) => (
             <Item
-              title={item.title}
-              subtitle={item.subtitle}
-              link={item.link}
+              intlName={item.intlName}
               linkTitle={item.linkTitle}
+              link={item.link}
               techs={item.techs}
-              description={item.description}
               type="odd"
               key={i}
             />
@@ -25,16 +22,14 @@ export default function Projects() {
       </div>
       <div className="projects__divider"></div>
       <div className="projects__even">
-        {projectsList
+        {projects
           .filter((_, i) => i % 2 !== 0)
           .map((item, i) => (
             <Item
-              title={item.title}
-              subtitle={item.subtitle}
-              link={item.link}
+              intlName={item.intlName}
               linkTitle={item.linkTitle}
+              link={item.link}
               techs={item.techs}
-              description={item.description}
               type="even"
               key={i}
             />

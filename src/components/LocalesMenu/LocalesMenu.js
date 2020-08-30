@@ -1,19 +1,10 @@
 import React, { useState } from "react";
 import "./LocalesMenu.css";
 import { Button, Menu, MenuItem } from "@material-ui/core";
+import { useTranslation } from "react-i18next";
+import { languages, langIcons } from "../../info";
 
-export default function LocalesMenu({ changeLanguage, language }) {
-  const icons = {
-    en: {
-      text: "English",
-      icon: "uk",
-    },
-    ru: {
-      text: "Русский",
-      icon: "russia",
-    },
-  };
-
+export default function LocalesMenu() {
   let [langMenu, setLangMenu] = useState(null);
 
   const openMenu = event => {
@@ -23,6 +14,8 @@ export default function LocalesMenu({ changeLanguage, language }) {
   const closeMenu = () => {
     setLangMenu(null);
   };
+
+  const { i18n } = useTranslation();
 
   return (
     <div>
@@ -34,7 +27,9 @@ export default function LocalesMenu({ changeLanguage, language }) {
       >
         <img
           className="language__img"
-          src={`${process.env.PUBLIC_URL}/icons/${icons[language].icon}.svg`}
+          src={`${process.env.PUBLIC_URL}/icons/${
+            langIcons[i18n.language].icon
+          }.svg`}
           alt=""
         />
       </Button>
@@ -45,22 +40,16 @@ export default function LocalesMenu({ changeLanguage, language }) {
         open={Boolean(langMenu)}
         onClose={closeMenu}
       >
-        <MenuItem onClick={() => changeLanguage("ru")}>
-          <img
-            className="language__img"
-            src={`${process.env.PUBLIC_URL}/icons/${icons.ru.icon}.svg`}
-            alt=""
-          />
-          <span className="language__title">{icons.ru.text}</span>
-        </MenuItem>
-        <MenuItem onClick={() => changeLanguage("en")}>
-          <img
-            className="language__img"
-            src={`${process.env.PUBLIC_URL}/icons/${icons.en.icon}.svg`}
-            alt=""
-          />
-          <span className="language__title">{icons.en.text}</span>
-        </MenuItem>
+        {languages.map(lang => (
+          <MenuItem key={lang} onClick={() => i18n.changeLanguage(lang)}>
+            <img
+              className="language__img"
+              src={`${process.env.PUBLIC_URL}/icons/${langIcons[lang].icon}.svg`}
+              alt=""
+            />
+            <span className="language__title">{langIcons[lang].name}</span>
+          </MenuItem>
+        ))}
       </Menu>
     </div>
   );
