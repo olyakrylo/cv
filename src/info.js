@@ -21,18 +21,22 @@ export const about = {
 
 export const contactIcons = [
   {
+    modificator: "vk",
     icon: "vk",
     href: "https://vk.com/olyakrylo",
   },
   {
+    modificator: "tg",
     icon: "tg",
     href: "https://t.me/olyakrylo",
   },
   {
+    modificator: "git",
     icon: "github",
     href: "https://github.com/olyakrylo",
   },
   {
+    modificator: "inst",
     icon: "inst",
     href: "https://www.instagram.com/olyakrylo",
   },

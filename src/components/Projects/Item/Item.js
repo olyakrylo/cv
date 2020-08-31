@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Button } from "@material-ui/core";
 import "./Item.css";
 
 export default function Item({ intlName: intl, link, linkTitle, techs, type }) {
@@ -33,7 +34,7 @@ export default function Item({ intlName: intl, link, linkTitle, techs, type }) {
         <div className="item__info">
           <div className="item__title">{t(`${intl}.title`)}</div>
           <div className="item__subtitle">{t(`${intl}.subtitle`)}</div>
-          <a className="item__link" href={link}>
+          <a className="item__link" href={link} target="_blank" rel="noopener noreferrer">
             {t("open_with")}
             &nbsp;{linkTitle}
           </a>

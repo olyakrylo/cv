@@ -22,10 +22,16 @@ export default function About() {
   function getContacts() {
     return contactIcons.map((item, i) => (
       <Tooltip title={item.href} key={i}>
-        <a href={item.href} className="info__link">
+        <a
+          href={item.href}
+          className={`info__link info__link_${item.modificator}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src={`${process.env.PUBLIC_URL}/icons/${item.icon}.svg`}
             alt=""
+            className="info__link-img"
           />
         </a>
       </Tooltip>
@@ -34,11 +40,7 @@ export default function About() {
 
   return (
     <div className="about">
-      <img
-        src={`${process.env.PUBLIC_URL}/img/me.png`}
-        className="about__img"
-        alt=""
-      />
+      <img src={`${process.env.PUBLIC_URL}/img/me.png`} className="about__img" alt="" />
       <div className="about__info info">
         <div className="info__hello">{t("about.hello")}!</div>
         <div className="info__name">
