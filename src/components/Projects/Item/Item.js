@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Button } from "@material-ui/core";
 import "./Item.css";
 
 export default function Item({ intlName: intl, link, linkTitle, techs, type }) {

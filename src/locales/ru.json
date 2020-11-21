@@ -36,9 +36,9 @@
     "subtitle": "Учебный проект",
     "description": "Позже..."
   },
-  "tsl": {
-    "title": "Верстка сайта по макету",
-    "subtitle": "С адаптивным дизайном",
+  "mts": {
+    "title": "MultiTenant магазин",
+    "subtitle": "Учебный проект",
     "description": "Позже..."
   },
   "interests": "Интересы",
@@ -46,6 +46,6 @@
   "experience": "Опыт",
   "BIOCAD": {
     "name": "BIOCAD",
-    "position": "Стажер фронтендер"
+    "position": "Младший фронтенд-разработчик"
   }
 }

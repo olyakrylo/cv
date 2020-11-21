@@ -38,9 +38,9 @@
     "subtitle": "Uni project",
     "description": "Later..."
   },
-  "tsl": {
-    "title": "Site layout by open source layout",
-    "subtitle": "With adaptive design",
+  "mts": {
+    "title": "MultiTenant shop",
+    "subtitle": "Uni project",
     "description": "Later..."
   },
   "interests": "Interests",
@@ -48,6 +48,6 @@
   "experience": "Experience",
   "BIOCAD": {
     "name": "BIOCAD",
-    "position": "Front-End Intern"
+    "position": "Junior Front-End Developer"
   }
 }

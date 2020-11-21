@@ -50,6 +50,12 @@ export const projects = [
     techs: ["ReactJS", "Express", "MongoDB"],
   },
   {
+    intlName: "mts",
+    linkTitle: "Pages",
+    link: "https://olyakrylo.github.io/multi-tenant-shop/#/",
+    techs: ["React", "TypeScript", "Django"],
+  },
+  {
     intlName: "pb",
     linkTitle: "Heroku",
     link: "https://amcp-pb.herokuapp.com/",
@@ -60,12 +66,6 @@ export const projects = [
     linkTitle: "Expo",
     link: "https://expo.io/@olyakrylo/VTBProject",
     techs: ["React-Native", "Expo SDK"],
-  },
-  {
-    intlName: "tsl",
-    linkTitle: "Pages",
-    link: "https://olyakrylo.github.io/test-site-layout/#/",
-    techs: ["ReactJS", "SASS"],
   },
 ];
 
@@ -93,6 +93,10 @@ export const skills = [
   {
     icon: "css.svg",
     text: "CSS 3",
+  },
+  {
+    icon: "nest.png",
+    text: "NestJS",
   },
   {
     icon: "sass.svg",
