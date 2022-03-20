@@ -12,8 +12,8 @@ export const langIcons = {
 };
 
 export const about = {
-  age: 21,
-  city: "about.city",
+  age: 22,
+  // city: "about.city_name",
   email: "olyakrylo24@gmail.com",
   phone: "+79222162625",
   website: "olyakrylo.github.io/cv",
@@ -45,9 +45,9 @@ export const contactIcons = [
 export const projects = [
   {
     intlName: "mc",
-    linkTitle: "Pages",
-    link: "https://olyakrylo.github.io/memory-cards/#/",
-    techs: ["ReactJS", "Express", "MongoDB"],
+    linkTitle: "Vercel",
+    link: "https://memory-cards-v2.vercel.app/app",
+    techs: ["Next.js", "TypeScript", "MongoDB"],
   },
   {
     intlName: "mts",
@@ -56,11 +56,15 @@ export const projects = [
     techs: ["React", "TypeScript", "Django"],
   },
   {
-    intlName: "pb",
-    linkTitle: "Heroku",
-    link: "https://amcp-pb.herokuapp.com/",
-    techs: ["ReactJS", "Django", "Heroku"],
+    intlName: "botanique",
+    techs: ["Angular 11", "NestJS"],
   },
+  // {
+  //   intlName: "pb",
+  //   linkTitle: "Heroku",
+  //   link: "https://amcp-pb.herokuapp.com/",
+  //   techs: ["ReactJS", "Django", "Heroku"],
+  // },
   {
     intlName: "ecs",
     linkTitle: "Expo",
@@ -83,8 +87,20 @@ export const skills = [
     text: "React & React-Native",
   },
   {
-    icon: "angular.png",
+    icon: "angular.svg",
     text: "Angular",
+  },
+  {
+    icon: "next-js.svg",
+    text: "Next.js",
+  },
+  {
+    icon: "nest-ts.svg",
+    text: "NestJS",
+  },
+  {
+    icon: "mongo.svg",
+    text: "MongoDB",
   },
   {
     icon: "html.svg",
@@ -93,10 +109,6 @@ export const skills = [
   {
     icon: "css.svg",
     text: "CSS 3",
-  },
-  {
-    icon: "nest.png",
-    text: "NestJS",
   },
   {
     icon: "sass.svg",
@@ -111,7 +123,11 @@ export const skills = [
     text: "Python",
   },
   {
-    icon: "expo.png",
+    icon: "django.svg",
+    text: "Django",
+  },
+  {
+    icon: "expo.svg",
     text: "Expo SDK",
   },
   {
@@ -119,7 +135,7 @@ export const skills = [
     text: "Adobe Illustrator",
   },
   {
-    icon: "figma.png",
+    icon: "figma.svg",
     text: "Figma",
   },
   {

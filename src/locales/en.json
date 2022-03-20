@@ -10,7 +10,8 @@
     "email": "Email",
     "phone": "Phone",
     "website": "Website",
-    "city": "Saint Petersburg"
+    "city": "City",
+    "city_name": "St. Petersburg"
   },
   "education": "Education",
   "uni": {
@@ -25,7 +26,7 @@
   "open_with": "Open with",
   "mc": {
     "title": "Memory Cards",
-    "subtitle": "Simple project",
+    "subtitle": "Just for fun",
     "description": "Later..."
   },
   "pb": {
@@ -38,6 +39,11 @@
     "subtitle": "Uni project",
     "description": "Later..."
   },
+  "botanique": {
+    "title": "System for monitoring laboratory equipment",
+    "subtitle": "Work project",
+    "description": "Later..."
+  },
   "mts": {
     "title": "MultiTenant shop",
     "subtitle": "Uni project",
@@ -48,6 +54,7 @@
   "experience": "Experience",
   "BIOCAD": {
     "name": "BIOCAD",
-    "position": "Junior Front-End Developer"
-  }
+    "position": "Front-End Developer"
+  },
+  "project_description": "Project description"
 }

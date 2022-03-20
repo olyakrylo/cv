@@ -18,32 +18,15 @@ body::before {
   max-width: 90vw;
   font-family: "Roboto";
   font-weight: 500;
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 .header {
   color: #fff;
   letter-spacing: 0.08em;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  position: relative;
-}
-
-.header__name {
-  display: block;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 35px;
-  text-transform: uppercase;
-}
-
-.header__position {
-  display: block;
-  margin-top: 12px;
-  font-weight: 300;
-  font-size: 17px;
-  line-height: 20px;
 }
 
 .content__title {

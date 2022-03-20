@@ -13,33 +13,34 @@ function App() {
     <div className="container">
       <div className="content">
         <div className="header">
-          <div>
-            <span className="header__name">{t("name")}</span>
-            <span className="header__position">{t("position")}</span>
-          </div>
           <LocalesMenu />
         </div>
+
         <About />
+
         <div className="content__title">{t("education")}</div>
         <Organization
           title="uni.status"
           subtitle="uni.faculty"
-          year="2017-..."
+          year="2017 - 2021"
           logo="spbu.png"
         />
+
         <div className="content__title">{t("projects")}</div>
         <Projects />
-        <div className="content__title">
-          {t("interests")}&nbsp;&amp;&nbsp;{t("skills")}
-        </div>
-        <Skills />
+
         <div className="content__title">{t("experience")}</div>
         <Organization
           title="BIOCAD.name"
           subtitle="BIOCAD.position"
-          year="2020"
+          year="2020 - ..."
           logo="biocad.png"
         />
+
+        <div className="content__title">
+          {t("interests")}&nbsp;&amp;&nbsp;{t("skills")}
+        </div>
+        <Skills />
       </div>
     </div>
   );
