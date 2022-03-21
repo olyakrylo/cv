@@ -15,6 +15,11 @@ export default function LocalesMenu() {
     setLangMenu(null);
   };
 
+  const changeLanguage = async lang => {
+    await i18n.changeLanguage(lang);
+    localStorage.setItem("lang", lang);
+  };
+
   const { i18n } = useTranslation();
 
   return (
@@ -27,9 +32,7 @@ export default function LocalesMenu() {
       >
         <img
           className="language__img"
-          src={`${process.env.PUBLIC_URL}/icons/${
-            langIcons[i18n.language].icon
-          }.svg`}
+          src={`${process.env.PUBLIC_URL}/icons/${langIcons[i18n.language].icon}.svg`}
           alt=""
         />
       </Button>
@@ -41,7 +44,7 @@ export default function LocalesMenu() {
         onClose={closeMenu}
       >
         {languages.map(lang => (
-          <MenuItem key={lang} onClick={() => i18n.changeLanguage(lang)}>
+          <MenuItem key={lang} onClick={() => changeLanguage(lang)}>
             <img
               className="language__img"
               src={`${process.env.PUBLIC_URL}/icons/${langIcons[lang].icon}.svg`}

@@ -10,14 +10,7 @@ export default function Projects() {
         {projects
           .filter((_, i) => i % 2 === 0)
           .map((item, i) => (
-            <Item
-              intlName={item.intlName}
-              linkTitle={item.linkTitle}
-              link={item.link}
-              techs={item.techs}
-              type="odd"
-              key={i}
-            />
+            <Item item={item} type="odd" key={i} />
           ))}
       </div>
       <div className="projects__divider"></div>
@@ -25,14 +18,7 @@ export default function Projects() {
         {projects
           .filter((_, i) => i % 2 !== 0)
           .map((item, i) => (
-            <Item
-              intlName={item.intlName}
-              linkTitle={item.linkTitle}
-              link={item.link}
-              techs={item.techs}
-              type="even"
-              key={i}
-            />
+            <Item item={item} type="even" key={i} />
           ))}
       </div>
     </div>

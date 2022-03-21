@@ -12,11 +12,16 @@ const resources = {
   },
 };
 
+const storageLang = localStorage.getItem("lang");
 const navLang = navigator.language.split(/[-_]/)[0];
+
+const getLangValue = lang => {
+  return Object.keys(resources).includes(lang) ? lang : undefined;
+};
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: navLang === "en" || navLang === "ru" ? navLang : "en",
+  lng: getLangValue(storageLang) ?? getLangValue(navLang) ?? "en",
   keySeparator: ".",
 });
 

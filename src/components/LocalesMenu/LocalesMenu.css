@@ -10,7 +10,7 @@
   margin-left: 15px;
 }
 
-.MuiButton-root {
+.header__lang-button.MuiButton-root {
   min-width: 33px !important;
   width: 33px !important;
   height: 33px !important;

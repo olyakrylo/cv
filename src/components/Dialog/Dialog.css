@@ -1,0 +1,11 @@
+.list.MuiList-padding {
+  padding: 0;
+}
+
+.list__item.MuiListItem-gutters {
+  padding-left: 0;
+}
+
+.title.MuiDialogTitle-root {
+  padding-bottom: 0;
+}

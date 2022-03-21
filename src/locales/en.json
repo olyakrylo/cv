@@ -1,7 +1,7 @@
 {
   "language": "English",
   "name": "Krylova Olga",
-  "position": "Front-End developer",
+  "position": "Frontend developer",
   "about": {
     "hello": "Hello & Welcome",
     "name": "I'm",
@@ -11,12 +11,13 @@
     "phone": "Phone",
     "website": "Website",
     "city": "City",
-    "city_name": "St. Petersburg"
+    "city_name": "St. Petersburg",
+    "cv": "CV"
   },
   "education": "Education",
   "uni": {
-    "status": "4th year bachelor at Saint-Petersburg State University",
-    "faculty": "Faculty of Applied Maths and Control Processes"
+    "name": "Saint Petersburg State University",
+    "status": "BSc. in Computer Science"
   },
   "education.uni": "4th year bachelor at Saint-Petersburg State University",
   "education.faculty": "Faculty of Applied Maths and Control Processes",
@@ -27,7 +28,9 @@
   "mc": {
     "title": "Memory Cards",
     "subtitle": "Just for fun",
-    "description": "Later..."
+    "description": {
+      "main": "An application for creating private or public topics with memory cards with simple authorisation by <a>tokens</a>"
+    }
   },
   "pb": {
     "title": "Web-app for faculty trade union bureau",
@@ -54,7 +57,8 @@
   "experience": "Experience",
   "BIOCAD": {
     "name": "BIOCAD",
-    "position": "Front-End Developer"
+    "position": "Frontend Developer",
+    "year": "2020 — Present"
   },
   "project_description": "Project description"
 }

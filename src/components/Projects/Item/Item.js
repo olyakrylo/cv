@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./Item.css";
 import AppDialog from "../../Dialog";
+import { Link } from "@material-ui/core";
 
-export default function Item({ intlName: intl, link, linkTitle, techs, type }) {
-  const item = React.createRef();
+export default function Item({ item, type }) {
   const [dialogOpened, setDialogOpened] = useState(false);
 
   function openDialog() {
@@ -15,16 +15,18 @@ export default function Item({ intlName: intl, link, linkTitle, techs, type }) {
     setDialogOpened(false);
   }
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
-    <div className={`item item_${type}`} ref={item}>
+    <div className={`item item_${type}`}>
       <div className="item__info">
-        <div className="item__title">{t(`${intl}.title`)}</div>
-        <div className="item__subtitle">{t(`${intl}.subtitle`)}</div>
-        {link && (
-          <a className="item__link" href={link} target="_blank" rel="noopener noreferrer">
+        <Link target="_blank" href={item.gitHubLink} className="item__title">
+          {t(`${item.intlName}.title`)}
+        </Link>
+        <div className="item__subtitle">{t(`${item.intlName}.subtitle`)}</div>
+        {item.link && (
+          <a className="item__link" href={item.link} target="_blank" rel="noopener noreferrer">
             {t("open_with")}
-            &nbsp;{linkTitle}
+            &nbsp;{item.linkTitle}
           </a>
         )}
         <div className="item__bottom">
@@ -32,7 +34,7 @@ export default function Item({ intlName: intl, link, linkTitle, techs, type }) {
             {t("read_more")}
           </button>
           <div className="item__techs">
-            {techs.map((tech, i) => (
+            {item.techs.map((tech, i) => (
               <div className="item__tech" key={i}>
                 {tech}
               </div>
@@ -44,7 +46,7 @@ export default function Item({ intlName: intl, link, linkTitle, techs, type }) {
       <AppDialog
         opened={dialogOpened}
         title={t("project_description")}
-        content={t(`${intl}.description`)}
+        infoList={item.infoList[i18n.language] ?? []}
         onClose={closeDialog}
       />
     </div>
