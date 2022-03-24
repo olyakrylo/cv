@@ -49,12 +49,18 @@
     "description": "Позже..."
   },
   "interests": "Интересы",
-  "skills": "Навыки",
   "experience": "Опыт",
   "BIOCAD": {
     "name": "BIOCAD",
     "position": "Фронтенд-разработчик",
     "year": "2020 — настоящее время"
   },
-  "project_description": "Описание проекта"
+  "project_description": "Описание проекта",
+  "skills": {
+    "title": "Навыки",
+    "communication": "Общение",
+    "teamwork": "Работа в команде",
+    "problem_solving": "Решение проблем",
+    "attention_to_detail": "Внимание к деталям"
+  }
 }

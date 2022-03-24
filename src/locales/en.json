@@ -53,12 +53,18 @@
     "description": "Later..."
   },
   "interests": "Interests",
-  "skills": "Skills",
   "experience": "Experience",
   "BIOCAD": {
     "name": "BIOCAD",
     "position": "Frontend Developer",
     "year": "2020 — Present"
   },
-  "project_description": "Project description"
+  "project_description": "Project description",
+  "skills": {
+    "title": "Skills",
+    "communication": "Communi-cation",
+    "teamwork": "Teamwork",
+    "problem_solving": "Problem-solving",
+    "attention_to_detail": "Attention to detail"
+  }
 }

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./Item.css";
+import { useTranslation } from "react-i18next";
 
 export default function SkillsItem({ info }) {
   const [showTitle, toggleTitle] = useState(false);
+
+  const { t } = useTranslation();
 
   function turnOver(event) {
     const item = event.currentTarget;
@@ -16,13 +19,9 @@ export default function SkillsItem({ info }) {
   return (
     <div className="skills__item" onClick={turnOver}>
       {!showTitle && (
-        <img
-          className="skills__img"
-          src={`${process.env.PUBLIC_URL}/icons/${info.icon}`}
-          alt=""
-        />
+        <img className="skills__img" src={`${process.env.PUBLIC_URL}/icons/${info.icon}`} alt="" />
       )}
-      {showTitle && info.text}
+      {showTitle && t(info.text)}
     </div>
   );
 }

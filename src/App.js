@@ -48,7 +48,7 @@ function App() {
           <Organization title="uni.name" subtitle="uni.status" year="2017 — 2021" logo="spbu.png" />
 
           <div className="content__title">
-            {t("interests")}&nbsp;&amp;&nbsp;{t("skills")}
+            {t("interests")}&nbsp;&amp;&nbsp;{t("skills.title")}
           </div>
           <Skills />
         </div>

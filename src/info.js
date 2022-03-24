@@ -301,3 +301,22 @@ export const skills = [
     text: "Heroku",
   },
 ];
+
+export const softSkills = [
+  {
+    icon: "communication.svg",
+    text: "skills.communication",
+  },
+  {
+    icon: "collaboration.svg",
+    text: "skills.teamwork",
+  },
+  {
+    icon: "sync-problem.svg",
+    text: "skills.problem_solving",
+  },
+  {
+    icon: "details.svg",
+    text: "skills.attention_to_detail",
+  },
+];
