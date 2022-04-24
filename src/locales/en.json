@@ -3,8 +3,6 @@
   "name": "Krylova Olga",
   "position": "Frontend developer",
   "about": {
-    "hello": "Hello & Welcome",
-    "name": "I'm",
     "age": "Age",
     "location": "Location",
     "email": "Email",
@@ -27,37 +25,26 @@
   "open_with": "Open with",
   "mc": {
     "title": "Memory Cards",
-    "subtitle": "Just for fun",
-    "description": {
-      "main": "An application for creating private or public topics with memory cards with simple authorisation by <a>tokens</a>"
-    }
+    "subtitle": "Just for fun"
   },
   "pb": {
     "title": "Web-app for faculty trade union bureau",
-    "subtitle": "Uni project",
-    "description": "Later..."
+    "subtitle": "Uni project"
   },
   "ecs": {
     "title": "Mobile web-app for employment control system",
-    "subtitle": "Uni project",
-    "description": "Later..."
-  },
-  "botanique": {
-    "title": "System for monitoring laboratory equipment",
-    "subtitle": "Work project",
-    "description": "Later..."
+    "subtitle": "Uni project"
   },
   "mts": {
     "title": "MultiTenant shop",
-    "subtitle": "Uni project",
-    "description": "Later..."
+    "subtitle": "Uni project"
   },
   "interests": "Interests",
   "experience": "Experience",
   "BIOCAD": {
     "name": "BIOCAD",
     "position": "Frontend Developer",
-    "year": "2020 — Present"
+    "year": "Jul 2020 — Apr 2022"
   },
   "project_description": "Project description",
   "skills": {

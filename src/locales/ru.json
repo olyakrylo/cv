@@ -3,8 +3,6 @@
   "name": "Крылова Ольга",
   "position": "Фронтенд-разработчик",
   "about": {
-    "hello": "Привет",
-    "name": "Я",
     "age": "Возраст",
     "location": "Город",
     "email": "Email",
@@ -25,35 +23,26 @@
   "open_with": "Открыть с помощью",
   "mc": {
     "title": "Memory Cards",
-    "subtitle": "Проект для развлечения",
-    "description": "Позже..."
+    "subtitle": "Проект для развлечения"
   },
   "pb": {
     "title": "Веб-приложение для активистов факультета",
-    "subtitle": "Учебный проект",
-    "description": "Позже..."
+    "subtitle": "Учебный проект"
   },
   "ecs": {
     "title": "Мобильное приложение для контроля занятости рабочих мест",
-    "subtitle": "Учебный проект",
-    "description": "Позже..."
-  },
-  "botanique": {
-    "title": "Система для мониторинга лабораторного оборудования",
-    "subtitle": "Рабочий проект",
-    "description": "Позже..."
+    "subtitle": "Учебный проект"
   },
   "mts": {
     "title": "MultiTenant магазин",
-    "subtitle": "Учебный проект",
-    "description": "Позже..."
+    "subtitle": "Учебный проект"
   },
   "interests": "Интересы",
   "experience": "Опыт",
   "BIOCAD": {
     "name": "BIOCAD",
     "position": "Фронтенд-разработчик",
-    "year": "2020 — настоящее время"
+    "year": "Июль 2020 — Апрель 2022"
   },
   "project_description": "Описание проекта",
   "skills": {
