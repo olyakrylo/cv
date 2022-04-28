@@ -19,14 +19,23 @@ export default function Item({ item, type }) {
   return (
     <div className={`item item_${type}`}>
       <div className="item__info">
-        <Link target="_blank" href={item.gitHubLink} className="item__title">
+        <div className="item__title">
           {t(`${item.intlName}.title`)}
-        </Link>
+          {item.gitHubLink && (
+            <Link target="_blank" href={item.gitHubLink} className="item__gh-link">
+              <img
+                alt="github"
+                src={`${process.env.PUBLIC_URL}/icons/github.svg`}
+                className="item__gh-image"
+              />
+            </Link>
+          )}
+        </div>
         <div className="item__subtitle">{t(`${item.intlName}.subtitle`)}</div>
         {item.link && (
           <a className="item__link" href={item.link} target="_blank" rel="noopener noreferrer">
-            {t("open_with")}
-            &nbsp;{item.linkTitle}
+            {t(item.linkTitle ? "open_with" : "open")}
+            {item.linkTitle && <>&nbsp;{item.linkTitle}</>}
           </a>
         )}
         <div className="item__bottom">

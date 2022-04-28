@@ -53,25 +53,25 @@ export const biocadInfoList = {
       автоматизирующей процессы мониторинга оборудования и работы с ним. Система состоит из модулей
       для работы с оборудованием, отчетами, дашбордами и различными графиками.
       <br />
-      Стек: Angular 11, RxJs, NestJS, ECharts, Material UI, svg.
+      <b>Стек:</b> Angular 11, RxJs, NestJS, ECharts, Material UI, svg.
     </Typography>,
     <Typography>
       Реализация взаимодействия между фронтендом и бэкендом с использованием <b>REST</b> и{" "}
       <b>WebSockets</b>.
       <br />
-      Стек: fetch API, Centrifugo.
+      <b>Стек:</b> fetch API, Centrifugo.
     </Typography>,
     <Typography>
       Разработка части модуля для аутентификации и авторизации пользователей через{" "}
       <b>Microsoft Azure</b> и <b>KeyCloak</b>.
       <br />
-      Стек: openid-client.
+      <b>Стек:</b> openid-client.
     </Typography>,
     <Typography>
       Участие в построении <b>CI/CD</b> пайплайна, который помогает тестировать приложение на каждой
       стадии.
       <br />
-      Стек: Docker, Kubernetes, GitLab
+      <b>Стек:</b> Docker, Kubernetes, GitLab
     </Typography>,
   ],
   en: [
@@ -81,23 +81,23 @@ export const biocadInfoList = {
       process of equipment booking and monitoring. The system consisted of modules for working with
       laboratory equipment, reports, dashboards and various charts.
       <br />
-      Stack: Angular 11, RxJs, NestJS, ECharts, Material UI, svg.
+      <b>Stack:</b> Angular 11, RxJs, NestJS, ECharts, Material UI, svg.
     </Typography>,
     <Typography>
       Implemented communication between frontend and backend using <b>REST</b> and <b>WebSockets</b>
       .<br />
-      Stack: fetch API, Centrifugo.
+      <b>Stack:</b> fetch API, Centrifugo.
     </Typography>,
     <Typography>
       Developed a part of the module for authentication and authorisation using{" "}
       <b>Microsoft Azure</b> and <b>KeyCloak</b>.<br />
-      Stack: openid-client.
+      <b>Stack:</b> openid-client.
     </Typography>,
     <Typography>
       Participated in building <b>CI/CD</b> pipeline which helps to test the application at each
       stage.
       <br />
-      Stack: Docker, Kubernetes, GitLab.
+      <b>Stack:</b> Docker, Kubernetes, GitLab.
     </Typography>,
   ],
 };
@@ -105,9 +105,9 @@ export const biocadInfoList = {
 export const projects = [
   {
     intlName: "mc",
-    linkTitle: "Vercel",
+    // linkTitle: "Vercel",
     link: "https://memory-cards-v2.vercel.app/app",
-    techs: ["Next.js", "TypeScript", "MongoDB"],
+    techs: ["Next.js", "TypeScript", "Redux", "mui", "MongoDB", "Redis"],
     gitHubLink: "https://github.com/olyakrylo/memory-cards-v2",
     infoList: {
       ru: [
@@ -122,6 +122,13 @@ export const projects = [
           </Link>
           .
         </Typography>,
+        <Typography>
+          Также ипользуется{" "}
+          <Link href="https://redis.io/" target="_blank">
+            Redis
+          </Link>{" "}
+          для хранения изображений.
+        </Typography>,
       ],
       en: [
         <Typography>
@@ -129,11 +136,18 @@ export const projects = [
           authorisation by tokens.
         </Typography>,
         <Typography>
-          It uses{" "}
+          Uses{" "}
           <Link href="https://mongoosejs.com/" target="_blank">
             mongoose
           </Link>{" "}
           for database fetching without any remote server.
+        </Typography>,
+        <Typography>
+          Also uses{" "}
+          <Link href="https://redis.io/" target="_blank">
+            Redis
+          </Link>{" "}
+          to store images.
         </Typography>,
       ],
     },

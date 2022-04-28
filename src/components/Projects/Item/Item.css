@@ -19,10 +19,29 @@
 }
 
 .item__title {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-gap: 16px;
   font-weight: 500;
   font-size: 17px;
   line-height: 20px;
   color: var(--seagreen);
+}
+
+.item__gh-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gh-color);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.item__gh-image {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
 }
 
 .item__subtitle,
@@ -52,18 +71,18 @@
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .item__more,
 .item__descr-back {
   font-weight: 500;
   font-size: 14px;
-  line-height: 18px;
+  height: 36px;
   color: #c5c5c5;
   background-color: transparent;
   border: none;
-  padding: 6px 8px;
+  padding: 0 8px;
   cursor: pointer;
   outline: none;
   border-radius: 5px;
