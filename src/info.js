@@ -19,7 +19,7 @@ export const about = {
   // city: "about.city_name",
   email: "olyakrylo24@gmail.com",
   phone: "+7(922)-216-26-25",
-  cv: "https://github.com/olyakrylo/CV_pdf/blob/master/cv.pdf",
+  cv: "https://github.com/olyakrylo/CV_pdf/blob/master/Krylova_frontend_engineer.pdf",
 };
 
 export const contactIcons = [
@@ -113,41 +113,37 @@ export const projects = [
       ru: [
         <Typography>
           Приложение для создания публичных или приватных тем с карточками для запоминания с простой
-          авторизацией с помощью токенов.
+          авторизацией и панелью администратора.
         </Typography>,
         <Typography>
           Для работы с базой без использования удаленного сервера используется{" "}
           <Link href="https://mongoosejs.com/" target="_blank">
             mongoose
           </Link>
-          .
-        </Typography>,
-        <Typography>
-          Также ипользуется{" "}
+          . Также ипользуется{" "}
           <Link href="https://redis.io/" target="_blank">
             Redis
           </Link>{" "}
           для хранения изображений.
         </Typography>,
+        <Typography>
+          Пользовательские хуки используются в качестве сервисов для обращения к API и для
+          взаимодействия с состоянием приложения.
+        </Typography>,
       ],
       en: [
         <Typography>
           An application for creating private or public topics with memory cards with simple
-          authorisation by tokens.
+          authorisation and admin panel.
         </Typography>,
         <Typography>
-          Uses{" "}
           <Link href="https://mongoosejs.com/" target="_blank">
-            mongoose
+            Mongoose
           </Link>{" "}
-          for database fetching without any remote server.
+          is used for database fetching without any remote server and Redis is used to store images.
         </Typography>,
         <Typography>
-          Also uses{" "}
-          <Link href="https://redis.io/" target="_blank">
-            Redis
-          </Link>{" "}
-          to store images.
+          Custom hooks are used as services for api fetching and interaction with redux state.
         </Typography>,
       ],
     },
