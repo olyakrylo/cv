@@ -32,12 +32,14 @@ export default function Organization({ title, subtitle, year, logo, infoList }) 
       </div>
       <img className="org__img" src={`${process.env.PUBLIC_URL}/img/${logo}`} alt="" />
 
-      <AppDialog
-        opened={dialogOpened}
-        infoList={infoList}
-        title={t("project_description")}
-        onClose={closeDialog}
-      />
+      {infoList && (
+        <AppDialog
+          opened={dialogOpened}
+          infoList={infoList}
+          title={t("project_description")}
+          onClose={closeDialog}
+        />
+      )}
     </div>
   );
 }

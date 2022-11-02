@@ -10,6 +10,10 @@ export default class Skills extends React.Component {
     this.skills = React.createRef();
   }
 
+  state = {
+    showDivider: false,
+  };
+
   componentDidMount() {
     const show = () => {
       if (window.pageYOffset + window.innerHeight - this.skills.current.offsetTop > 100) {
@@ -18,6 +22,7 @@ export default class Skills extends React.Component {
           this.items[i].current.classList.add("skills__animation-container_end");
           i++;
           if (i === this.items.length) {
+            this.setState({ showDivider: true });
             clearInterval(interval);
           }
         }, 100);
@@ -29,23 +34,25 @@ export default class Skills extends React.Component {
 
   render() {
     return (
-      <div className="skills" ref={this.skills}>
-        {skills.map((item, i) => (
-          <div className="skills__item-container" key={i}>
-            <div ref={this.items[i]} className="skills__animation-container">
-              <SkillsItem info={item} />
+      <>
+        <div className="skills" ref={this.skills}>
+          {skills.map((item, i) => (
+            <div className="skills__item-container" key={i}>
+              <div ref={this.items[i]} className="skills__animation-container">
+                <SkillsItem info={item} />
+              </div>
             </div>
-          </div>
-        ))}
-        <br />
-        {softSkills.map((item, i) => (
-          <div className="skills__item-container" key={i}>
-            <div ref={this.items[skills.length + i]} className="skills__animation-container">
-              <SkillsItem info={item} />
+          ))}
+          <hr aria-hidden={!this.state.showDivider} className={"skills__divider"} />
+          {softSkills.map((item, i) => (
+            <div className="skills__item-container" key={i}>
+              <div ref={this.items[skills.length + i]} className="skills__animation-container">
+                <SkillsItem info={item} />
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </>
     );
   }
 }

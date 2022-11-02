@@ -42,10 +42,21 @@
   },
   "interests": "Interests",
   "experience": "Experience",
+  "courses": "Courses",
   "BIOCAD": {
     "name": "BIOCAD",
     "position": "Frontend Developer",
     "year": "Jul 2020 — Apr 2022"
+  },
+  "gpn": {
+    "name": "GAZPROM NEFT",
+    "position": "Frontend Developer",
+    "year": "Jul 2022 — Present"
+  },
+  "shri": {
+    "name": "Interface Development School",
+    "company": "Yandex LLC",
+    "year": "Jul 2022 — Sep 2022"
   },
   "project_description": "Project description",
   "skills": {

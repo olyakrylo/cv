@@ -14,8 +14,19 @@ export const langIcons = {
   },
 };
 
+function getAge() {
+  const today = new Date();
+  const birthDate = new Date(1999, 6, 1);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return age;
+}
+
 export const about = {
-  age: 22,
+  age: getAge(),
   // city: "about.city_name",
   email: "olyakrylo24@gmail.com",
   phone: "+7(922)-216-26-25",
@@ -98,6 +109,35 @@ export const biocadInfoList = {
       stage.
       <br />
       <b>Stack:</b> Docker, Kubernetes, GitLab.
+    </Typography>,
+  ],
+};
+
+export const gpnInfoList = {
+  ru: [
+    <Typography>
+      Разрабатывала систему навигации для морских судов, которая <b>помогала</b> морским капитанам
+      отслеживать положения и маршруты судов, следить за погодными условиями, ледовой обстановкой и
+      другими факторами риска.
+      <br />
+      <b>Cтек:</b> Angular 11, RxJs, Leaflet.
+    </Typography>,
+    <Typography>
+      Система также обеспечивала <b>взаимодействие</b> с картой для различных отметок и возможностью
+      ими <b>делиться</b>.
+    </Typography>,
+  ],
+  en: [
+    <Typography>
+      Developed a navigation system for sea vessels using <b>Angular</b> and <b>Leaflet</b>, which{" "}
+      <b>helped</b> sea captains to track the positions and routes of ships, monitor weather or ice
+      conditions and other risk factors.
+      <br />
+      <b>Stack:</b> Angular 11, RxJs, Leaflet.
+    </Typography>,
+    <Typography>
+      The system also provided <b>interaction</b> with the map for various marks and the ability to{" "}
+      <b>share</b> them.
     </Typography>,
   ],
 };
@@ -259,6 +299,10 @@ export const skills = [
     text: "Angular",
   },
   {
+    icon: "rxjs.svg",
+    text: "RxJS",
+  },
+  {
     icon: "next-js.svg",
     text: "Next.js",
   },
@@ -267,17 +311,21 @@ export const skills = [
     text: "NestJS",
   },
   {
+    icon: "leaflet.svg",
+    text: "Leaflet",
+  },
+  {
     icon: "mongo.svg",
     text: "MongoDB",
   },
-  {
-    icon: "html.svg",
-    text: "HTML 5",
-  },
-  {
-    icon: "css.svg",
-    text: "CSS 3",
-  },
+  // {
+  //   icon: "html.svg",
+  //   text: "HTML 5",
+  // },
+  // {
+  //   icon: "css.svg",
+  //   text: "CSS 3",
+  // },
   {
     icon: "sass.svg",
     text: "SASS & LESS",
@@ -297,10 +345,6 @@ export const skills = [
   {
     icon: "expo.svg",
     text: "Expo SDK",
-  },
-  {
-    icon: "ai.svg",
-    text: "Adobe Illustrator",
   },
   {
     icon: "figma.svg",

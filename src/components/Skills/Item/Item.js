@@ -13,7 +13,7 @@ export default function SkillsItem({ info }) {
     setTimeout(() => {
       toggleTitle(!showTitle);
       item.classList.remove("skills__item_hidden");
-    }, 300);
+    }, 200);
   }
 
   return (

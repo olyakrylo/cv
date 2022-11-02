@@ -40,6 +40,11 @@ body::before {
   color: var(--seagreen);
 }
 
+.content__experience {
+  display: grid;
+  grid-gap: 20px;
+}
+
 .MuiTypography-body1 {
   font-weight: 300 !important;
 }

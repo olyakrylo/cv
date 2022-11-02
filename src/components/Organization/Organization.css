@@ -39,9 +39,8 @@
 }
 
 .org__img {
-  display: block;
-  height: 70px;
-  margin-left: 30px;
+  display: inline-block;
+  max-width: 150px;
 }
 
 @media (max-width: 500px) {

@@ -7,7 +7,7 @@ import Organization from "./components/Organization";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import { createTheme, ThemeProvider } from "@material-ui/core";
-import { biocadInfoList } from "./info";
+import { biocadInfoList, gpnInfoList } from "./info";
 
 function App() {
   const theme = createTheme({
@@ -33,23 +33,38 @@ function App() {
           <About />
 
           <div className="content__title">{t("experience")}</div>
+          <div className={"content__experience"}>
+            <Organization
+              title={"gpn.name"}
+              subtitle={"gpn.position"}
+              year={"gpn.year"}
+              logo={"gpn.png"}
+              infoList={gpnInfoList[i18n.language]}
+            />
+            <Organization
+              title="BIOCAD.name"
+              subtitle="BIOCAD.position"
+              year="BIOCAD.year"
+              logo="biocad.png"
+              infoList={biocadInfoList[i18n.language]}
+            />
+          </div>
+
+          <div className="content__title">{t("education")}</div>
+          <Organization title="uni.name" subtitle="uni.status" year="2017 — 2021" logo="spbu.png" />
+
+          <div className={"content__title"}>{t("courses")}</div>
           <Organization
-            title="BIOCAD.name"
-            subtitle="BIOCAD.position"
-            year="BIOCAD.year"
-            logo="biocad.png"
-            infoList={biocadInfoList[i18n.language]}
+            title={"shri.name"}
+            subtitle={"shri.company"}
+            year={"shri.year"}
+            logo={"yandex.png"}
           />
 
           <div className="content__title">{t("projects")}</div>
           <Projects />
 
-          <div className="content__title">{t("education")}</div>
-          <Organization title="uni.name" subtitle="uni.status" year="2017 — 2021" logo="spbu.png" />
-
-          <div className="content__title">
-            {t("interests")}&nbsp;&amp;&nbsp;{t("skills.title")}
-          </div>
+          <div className="content__title">{t("skills.title")}</div>
           <Skills />
         </div>
       </div>

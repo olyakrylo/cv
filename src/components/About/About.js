@@ -12,7 +12,7 @@ export default function About() {
       let content = <div key={value}>{t(value)}</div>;
       if (field === "cv") {
         content = (
-          <Link href={value} target="_blank">
+          <Link key={value} href={value} target="_blank">
             View on GitHub
           </Link>
         );

@@ -1,29 +1,29 @@
 .skills__item {
-    background-color: #fff;
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: var(--shadow);
-    transform: scaleX(1);
-    transition: transform .3s ease-in-out;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 300;
-    cursor: pointer;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow);
+  transform: scaleX(1);
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
 }
 
 .skills__item:hover {
-    background-color: rgb(240, 240, 240);
+  background-color: rgb(240, 240, 240);
 }
 
 .skills__item_hidden {
-    transform: scaleX(0);
+  transform: scaleX(0);
 }
 
 .skills__img {
-    display: block;
-    height: 60px;
+  display: block;
+  height: 60px;
 }
