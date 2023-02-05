@@ -3,7 +3,7 @@ import "./Item.css";
 import { useTranslation } from "react-i18next";
 
 export default function SkillsItem({ info }) {
-  const [showTitle, toggleTitle] = useState(false);
+  const [turnedOver, setTurnedOver] = useState(false);
 
   const { t } = useTranslation();
 
@@ -11,17 +11,17 @@ export default function SkillsItem({ info }) {
     const item = event.currentTarget;
     item.classList.add("skills__item_hidden");
     setTimeout(() => {
-      toggleTitle(!showTitle);
+      setTurnedOver(!turnedOver);
       item.classList.remove("skills__item_hidden");
     }, 200);
   }
 
   return (
-    <div className="skills__item" onClick={turnOver}>
-      {!showTitle && (
+    <div className="skills__item-container">
+      <div className="skills__item" onClick={turnOver} aria-pressed={turnedOver}>
         <img className="skills__img" src={`${process.env.PUBLIC_URL}/icons/${info.icon}`} alt="" />
-      )}
-      {showTitle && t(info.text)}
+      </div>
+      <p className="skills__title">{t(info.text)}</p>
     </div>
   );
 }

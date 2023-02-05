@@ -142,7 +142,23 @@ export const gpnInfoList = {
   ],
 };
 
+export const yandexInfoList = {
+  ru: [<Typography>HR Tech</Typography>],
+  en: [<Typography>HR Tech</Typography>],
+};
+
 export const projects = [
+  {
+    intlName: "shape_constructor",
+    linkTitle: "Pages",
+    link: "https://olyakrylo.github.io/shape-constructor/",
+    techs: ["React", "TypeScript"],
+    gitHubLink: "https://github.com/olyakrylo/shape-constructor",
+    infoList: {
+      ru: [<Typography>Приложение для создания различных фигурок.</Typography>],
+      en: [<Typography>An application for creating various figures.</Typography>],
+    },
+  },
   {
     intlName: "mc",
     // linkTitle: "Vercel",
@@ -311,6 +327,26 @@ export const skills = [
     text: "NestJS",
   },
   {
+    icon: "comet.webp",
+    text: "Effector",
+  },
+  {
+    icon: "redux.svg",
+    text: "Redux toolkit",
+  },
+  {
+    icon: "webpack.svg",
+    text: "Webpack",
+  },
+  {
+    icon: "docker.svg",
+    text: "Docker",
+  },
+  {
+    icon: "ci-cd.svg",
+    text: "CI/CD",
+  },
+  {
     icon: "leaflet.svg",
     text: "Leaflet",
   },
@@ -334,14 +370,14 @@ export const skills = [
     icon: "git.svg",
     text: "Git",
   },
-  {
-    icon: "python.svg",
-    text: "Python",
-  },
-  {
-    icon: "django.svg",
-    text: "Django",
-  },
+  // {
+  //   icon: "python.svg",
+  //   text: "Python",
+  // },
+  // {
+  //   icon: "django.svg",
+  //   text: "Django",
+  // },
   {
     icon: "expo.svg",
     text: "Expo SDK",

@@ -48,7 +48,7 @@ export default function About() {
 
   return (
     <div className="about">
-      <img src={`${process.env.PUBLIC_URL}/img/me.png`} className="about__img" alt="" />
+      <img src={`${process.env.PUBLIC_URL}/img/me.webp`} className="about__img" alt="" />
       <div className="about__info info">
         <div className="info__name">
           <span className="info__name_bold">{t("name")}</span>
